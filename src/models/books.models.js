@@ -1,4 +1,4 @@
-const books = [
+let books = [
   {
     id: 1,
     title: "The Narnia",
@@ -59,8 +59,8 @@ function updateBooksById(id) {
 
 // DELETE books by id
 function deleteBooksById(id) {
-  const filteredBooks = books.filter((book) => book.id !== +id);
-  return filteredBooks;
+  books = books.filter((book) => book.id !== +id);
+  return books;
 }
 
 module.exports = {
